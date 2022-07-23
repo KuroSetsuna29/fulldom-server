@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "start": "./bin/server",
-    "test": "nyc -r text -r lcov vows test/*-test.js"
+    "test": "nyc -r text -r lcov vows test/page-retrieval-test.js"
   },
   "repository": {
     "type": "git",

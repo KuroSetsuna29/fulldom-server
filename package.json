@@ -10,7 +10,7 @@
     "./doc/fulldom-server.1"
   ],
   "scripts": {
-    "start": "./bin/server",
+    "start": "node ./bin/server",
     "test": "nyc -r text -r lcov vows test/page-retrieval-test.js"
   },
   "repository": {

@@ -24,7 +24,8 @@ License along with fulldom-server. If not, see
 
 var http = require('http'),
     querystring = require('querystring'),
-    concatStream = require('concat-stream');
+    concatStream = require('concat-stream'),
+    APIKEY = process.env.APIKEY || "038623df-6e2d-49e1-a5b4-70373ac04c82";;
 
 function get(port, path, cb) {
 	http.get('http://localhost:' + port + path, function(res) {
@@ -41,6 +42,7 @@ function apiCall(path, selector, cb) {
 	          + querystring.escape('http://localhost:6851' + path)
 	          + '?'
 	          + querystring.stringify({
+		          apikey: APIKEY,
 		          selector: selector
 	          }),
 	    cb
